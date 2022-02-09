@@ -1,0 +1,13 @@
+<div class="flex-container">
+    <div class="row">
+        <mat-dialog-content>
+            Biztosan törölni akarja a(z) <span style="font-weight: bold;">{{proba[data].nev}}</span> nevű elemet?
+        </mat-dialog-content>
+    </div>
+
+</div>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="cancel()">Nem</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true" (click)="torles()">Törlés</button>
+  </mat-dialog-actions>

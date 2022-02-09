@@ -1,0 +1,20 @@
+
+<form action="" [formGroup]="adatbekuldes">
+<mat-form-field appearance="fill">
+    <mat-label>Tárgy neve</mat-label>
+    <input matInput formControlName="nev">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Tárgy hossza</mat-label>
+    <input type="number" matInput formControlName="hossz">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Tárgy szélessége</mat-label>
+    <input type="number" matInput formControlName="szelesseg">
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Mégse</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="true" (click)="letrehoz()" [disabled] ="!adatbekuldes.valid">Mentés</button>
+  </mat-dialog-actions>
+</form>

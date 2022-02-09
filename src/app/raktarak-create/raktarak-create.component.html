@@ -1,0 +1,24 @@
+<mat-form-field>
+  <input matInput placeholder="ID" [(ngModel)]="raktarId" [disabled]="true">
+</mat-form-field>
+<form action="" [formGroup]="adatbekuldes">
+    <mat-form-field appearance="fill">
+        <mat-label>Raktár címe</mat-label>
+        <input matInput formControlName="cim">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label >Raktár hossza</mat-label>
+        <input matInput type="number" formControlName="hosszusag">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Raktár szélessége</mat-label>
+        <input matInput type="number" formControlName="szelesseg">
+      </mat-form-field>
+
+      <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Mégse</button>
+        <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+        <button mat-button [mat-dialog-close]="true" (click)="letrehoz()" [disabled] ="!adatbekuldes.valid" >Mentés</button>
+      </mat-dialog-actions>
+    </form>
+    

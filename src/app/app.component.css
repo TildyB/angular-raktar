@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+  .fejlec{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(99, 154, 202);
+  }
+  .letrehozas{
+    padding: 10px;
+  }

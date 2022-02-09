@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="user">
+    <h4 style="text-align:center">Admin user:</h4>
+    <p style="text-align:center"><span style="font-weight: bold;padding-right: 10px;">email:</span>Proba1@gmail.com</p>
+    <p style="text-align:center"><span style="font-weight: bold;padding-right: 10px;font-size: 1em;">password:</span>Proba1</p>
+    <hr>
+    <h4 style="text-align:center">Normal user:</h4>
+    <p style="text-align:center"><span style="font-weight: bold;padding-right: 10px;font-size: 1em;">email:</span>Proba2@gmail.com</p>
+    <p style="text-align:center"><span style="font-weight: bold;padding-right: 10px;font-size: 1em;">password:</span>Proba2</p>
+  </div>
+<mat-card>
+    <mat-card-content>
+      <form #loginForm="ngForm" [formGroup]="bejelentkezes">
+        <h2>Log In</h2>
+        <mat-form-field>
+          <input matInput placeholder="Email" type="email"  name="email" formControlName="email"> 
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password"  name="password" formControlName="password">
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="login()">Bejelentkezés</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

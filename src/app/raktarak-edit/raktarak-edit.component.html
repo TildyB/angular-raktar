@@ -1,0 +1,22 @@
+
+  <div class="container">
+  <mat-form-field>
+    <input matInput placeholder="Cim" [(ngModel)]="cim">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Raktár hossza</mat-label>
+    <input matInput  [(ngModel)]="hosszusag">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Raktár szélessége</mat-label>
+    <input matInput  [(ngModel)]="szelesseg">
+  </mat-form-field>
+
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="bezaras()">Mégse</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button [mat-dialog-close]="{id:id,cim: cim, hosszusag: hosszusag,szelesseg:szelesseg,datuma:datuma}" cdkFocusInitial>Mentés</button>
+  </mat-dialog-actions>
+</div>
+

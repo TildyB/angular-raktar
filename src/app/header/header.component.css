@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+  }
+  .fejlec{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(99, 154, 202);
+  }
+  .menu{
+      display: flex;
+      justify-content: space-evenly;
+      width: 50%;
+  }
+  .userName{
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      padding-right: 5em;
+  }
+  .userName h1{
+      font-size: medium;
+  }
